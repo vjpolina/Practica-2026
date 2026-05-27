@@ -16,7 +16,7 @@ echo $js_code;
 
 console_log('text here');
 */
- $Numere = [13, 135, 31, 49, 51, 99, 74, 86, 97, 2, 89];
+ $Numere = [13, 135, 31, 49, 51, 99, 74, 86, 97, 2,];
 
  echo "Numerele din array sunt: ";
  foreach ($Numere as $numar) {
