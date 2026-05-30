@@ -1,0 +1,6 @@
+CREATE TABLE users(
+	username VARCHAR(30) NOT NULL,
+    psw VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL,
+    created_at DATE NOT NULL DEFAULT CURRENT_DATE
+);
