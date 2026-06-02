@@ -1,0 +1,103 @@
+* {
+    font-family: monospace;
+}
+
+body {
+    background-color: #FCF8F8;
+    margin: 0;
+    padding: 0;
+
+    color:#D05A5A;
+}
+
+.registerForm {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex: 1;
+}
+
+#actionText{
+    margin:35px;
+    font-size: 32px;
+    background-color: #fbecec;
+    border: 2px solid #E9A0A0;
+    border-radius: 10px;
+
+    width: 400px;
+    height:50px;
+
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.formInputs{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex: 1;
+
+    gap: 35px;
+}
+
+.formInputs input{
+    width: 600px;
+    height: 45px;
+
+    background-color: #FBEFEF;
+    border: 2px solid #E9A0A0;
+    border-radius: 10px;
+    text-indent: 10px;
+
+    color: #D05A5A;
+}
+
+.formInputs input:focus{
+    border: 2px solid #D05A5A;
+}
+
+.formInputs input::placeholder{
+    color: 
+    #d05a5a85;
+}
+
+.actionButton{
+    background-color: #FBEFEF;
+    color:#D05A5A;
+    border: 2px solid #E9A0A0;
+    border-radius: 10px;
+
+    width: 150px;
+    height: 45px;
+}
+
+#messageSpace{
+    font-size:  15px;
+    padding:0;
+    margin:0;
+}
+
+.formError{
+    margin: -10px;
+    color: #d70000;
+    animation: shake-horizontal 0.5s ease-in;
+}
+
+.formSuccess{
+    margin:-10px;
+    color:#4fd700;
+}
+
+@keyframes shake-horizontal {
+  0%, 100% { transform: translateX(0); }
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+  20%, 40%, 60%, 80% { transform: translateX(5px); }
+}

@@ -42,6 +42,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
 
         $pdo=null;
         $stmt=null;
+        session_reset();
 
         die();
 
