@@ -33,12 +33,10 @@
     <a id="motto">Life is made of memories, treasure every one.</a>
 
     <section class="actionButtons">
-        <button>Sign up</button>
-        <button>Log in</button>
+        <button id="toRegister">Sign up</button>
+        <button id="toLogin">Log in</button>
     </section>
 </main>
-
-
 
 <section class="cardDisplay">
     <a>Share your story!</a>
@@ -60,6 +58,7 @@
     </div>
 </footer>
 
+<script src="../js/indexFunctions.js"></script>
 </body>
 
 </html>

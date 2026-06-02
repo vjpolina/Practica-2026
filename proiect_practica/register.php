@@ -9,20 +9,22 @@ require_once 'includes/register_view.inc.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JournalMe</title>
+    <link rel="stylesheet" href="../css/register.css">
 </head>
 <body>
-    
-<h3>Sign Up</h3>
-<form action="includes/register.inc.php" method="post">
+
+<section class="registerForm">
+<a id="actionText">Sign Up</a>
+<form action="includes/register.inc.php" method="post" class="formInputs" autocomplete="off">
     <input type="text" name="username" placeholder="Username"></input>
     <input type="text" name="email" placeholder="Youremailhere@example.com"></input>
     <input type="text" name="psw" placeholder="Password"></input>
-    <button>Sign up</button>
+    <?php check_errors();?>
+    <button class="actionButton">Sign up</button>
 </form>
+</section>
 
-<?php 
-    check_errors();
-?>
+<script src="../js/indexFunctions.js"></script>
 
 </body>
 </html>
