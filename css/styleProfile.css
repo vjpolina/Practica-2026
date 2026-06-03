@@ -1,0 +1,136 @@
+* button:hover{
+    cursor: pointer;
+}
+
+*{
+    font-family: monospace;
+}
+
+body {
+    background-color: #FCF8F8;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* top bar css*/
+header {
+
+    background-color: #E9A0A0;
+    color: #FCF8F8;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    top: 0;
+    padding: 0;
+    border: 0;
+    margin: 0;
+
+    height: 60px;
+    width: 100%;
+
+    z-index: 10;
+}
+
+#settings{
+    margin-left:20px;
+    display: flex;
+    flex: 10%;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    
+    font-size: 24px;
+}
+
+#settings button{
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    margin-right: 10px;
+}
+
+#settings button img{
+    width: 46px;
+    height: 46px;
+}
+
+nav{
+    margin-right: 20px;
+}
+
+nav button{
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+
+    font-size: 20px;
+    color: #FCF8F8;
+    margin: 15px;
+}
+
+/*profile section style*/
+
+.profileContent{
+    top:0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 300px;
+    height: 690px;
+    z-index: 5;
+
+    border: 3px solid #E9A0A0;
+    border-top: none;
+}
+
+.detailsAside{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#username{
+    border: 2px solid #D05A5A;
+    border-radius: 10px;
+    color: #D05A5A;
+    font-size: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 200px;
+    height: 45px;
+
+}
+
+#editBtn{
+    background-color: #D05A5A;
+    border: none;
+    color: #FCF8F8;
+    border-radius: 10px;
+
+    height: 30px;
+    width:140px;
+    font-size: 20px;
+}
+
+#logOut{
+    background-color: #D05A5A;
+    border: none;
+    color: #FCF8F8;
+    border-radius: 10px;
+
+    height: 30px;
+    width:140px;
+    font-size: 20px;
+
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 15px;
+}
