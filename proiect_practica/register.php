@@ -16,11 +16,12 @@ require_once 'includes/register_view.inc.php';
 <section class="registerForm">
 <a id="actionText">Sign Up</a>
 <form action="includes/register.inc.php" method="post" class="formInputs" autocomplete="off">
-    <input type="text" name="username" placeholder="Username"></input>
-    <input type="text" name="email" placeholder="Youremailhere@example.com"></input>
-    <input type="text" name="psw" placeholder="Password"></input>
-    <?php check_errors();?>
+
+    <?php
+    signup_input();
+    check_errors();?>
     <button class="actionButton">Sign up</button>
+    <button class="actionButton" id="toLogin">Log in</button>
 </form>
 </section>
 

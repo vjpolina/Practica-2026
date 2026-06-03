@@ -1,3 +1,7 @@
+<?php 
+require_once 'includes/config_session.inc.php';
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,10 +20,20 @@
     </div>
 
     <nav>
-        <button>Home</button>
-        <button>Explore</button>
-        <button>Home</button>
-        <button>Create</button>
+        <?php
+    if(!isset($_SESSION["user_id"])){?>
+        <button id="home">Home</button>
+        <button id="explore">Explore</button>
+        <button id="createUnlogged">Create</button>
+    <?php } else { ?>
+        <button id="home">Home</button>
+        <button id="explore">Explore</button>
+        <button id="create">Create</button>
+        <button id="profile">Profile</button>
+
+    <?php
+    } ?>
+
     </nav>
 </header>
 
@@ -30,12 +44,28 @@
         <a id="pageTitle">JournalMe</a>
         <div id="logoImg"><img src="\Practica-2026\images\book.png"></div>
     </div>
+
+    <?php
+    if(!isset($_SESSION["user_id"])){?>
     <a id="motto">Life is made of memories, treasure every one.</a>
 
     <section class="actionButtons">
         <button id="toRegister">Sign up</button>
         <button id="toLogin">Log in</button>
     </section>
+    <?php } else { ?>
+    <a id="motto">Hello, <?php 
+    echo $_SESSION["user_name"];
+    ?>!</a>
+
+    <section class="actionButtons">
+    <button id="create">Create</button>
+    <form action="includes/logout.inc.php" method="post"> <button id="logOut">Log out</button> </form>
+    </section>
+
+    <?php
+    } ?>
+
 </main>
 
 <section class="cardDisplay">
@@ -58,7 +88,7 @@
     </div>
 </footer>
 
-<script src="../js/indexFunctions.js"></script>
+<script src="../js/navFunctions.js"></script>
 </body>
 
 </html>
