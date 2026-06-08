@@ -3,6 +3,7 @@ const loginBtn = document.getElementById("toLogin");
 const toHome = document.getElementById("home");
 const toExplore = document.getElementById("explore");
 const toCreate = document.getElementById("create");
+const toCreateProf = document.getElementById("addPost");
 const toProfile = document.getElementById("profile");
 
 const unloggedCreate = document.getElementById("createUnlogged");
@@ -46,6 +47,13 @@ if (toCreate) {
     toCreate.addEventListener("click", function() {
         console.log("Create button clicked");
         window.location.href = "create.php";
+    });
+}
+
+if (toCreateProf) {
+    toCreateProf.addEventListener("click", function() {
+        console.log("Create button clicked");
+        window.location.assign("create.php");
     });
 }
 

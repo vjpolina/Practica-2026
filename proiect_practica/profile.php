@@ -43,8 +43,15 @@ require_once 'includes/config_session.inc.php';
         </section>
 
         <section class="journalContent">
-            <button id="addPost"><img src="../images/add.png"></button>
-            <div class="containedPosts"></div>
+            <div class="topIntro"> 
+            <a id="introText">Your Journal</a>
+            <button id="addPost" type="button" onclick="window.location.href='create.php'">
+                <img src="../images/add.png" alt="Add post">
+            </button>
+            </div>
+            <div class="containedPosts">
+                <p class="card"></p>
+            </div>
         </section>
 
     </section>

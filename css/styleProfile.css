@@ -80,26 +80,6 @@ nav button{
     min-height: calc(100vh - 60px); /* fill below header */
 }
 
-.journalContent{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: flex-start;
-    padding: 20px;
-
-    flex: 1;                   /* takes remaining width */
-}
-
-#addPost{
-    width: 45px;
-    height: 45px;
-
-    border: none;
-    background-color: #D05A5A;
-    border-radius: 6px;
-    margin-bottom: 16px;
-}
-
 .profileContent{
     position: relative;
     display: flex;
@@ -108,7 +88,7 @@ nav button{
     justify-content: flex-start;
     padding-top: 30px;
 
-    width: 160px;              /* fixed sidebar width */
+    width: 250px;
     flex-shrink: 0;
     min-height: 100%;
     z-index: 5;
@@ -129,6 +109,7 @@ nav button{
     border-radius: 10px;
     color: #D05A5A;
     font-size: 20px;
+    background-color: #FCF8F8;
 
     display: flex;
     align-items: center;
@@ -163,4 +144,69 @@ nav button{
     position: absolute;
     bottom: 0;
     margin-bottom: 15px;
+}
+
+/*journal content css*/
+
+
+.journalContent{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    padding: 20px;
+
+    flex: 1;
+}
+
+#addPost{
+    width: 45px;
+    height: 45px;
+
+    border: none;
+    background-color: #D05A5A;
+    border-radius: 6px;
+    margin-bottom: 16px;
+
+    z-index: 10;
+}
+
+.topIntro{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 16px;
+
+    margin-bottom: 15px;
+}
+
+#introText{
+    display: block;
+    font-size: 30px;
+    color: #D05A5A;
+    text-align: left;
+    text-indent: 10px;
+}
+
+/*cards/posts style*/
+.card{
+    background:
+    repeating-linear-gradient(
+      0deg,
+      #FFEDED,
+      #FFEDED 25px,
+      #F1B0B0 1px,
+      #F1B0B0 26px
+    ); 
+    width: 1080px;
+    height: 200px;
+    border-radius: 10px;
+
+    display: block;
+    align-self: center;
+
+    margin: 0;
+
+    border: 2px solid #F1B0B0;
 }
