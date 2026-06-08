@@ -52,5 +52,6 @@ require_once 'includes/config_session.inc.php';
         <button id="postBtn">Post!</button>
 </section>
 <script src="../js/navFunctions.js"></script>
+<script src="../js/createPost.js"></script>
 </body>
 </html>

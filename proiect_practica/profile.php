@@ -57,6 +57,7 @@ require_once 'includes/config_session.inc.php';
     </section>
 
     <script src="../js/navFunctions.js"></script>
+    <script src="../js/loadProfilePosts.js"></script>
 </body>
 
 </html>

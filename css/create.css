@@ -93,12 +93,12 @@ nav button{
     display: block;
     background:
     repeating-linear-gradient(
-      0deg,
-      #FFEDED,
-      #FFEDED 25px,
-      #F1B0B0 1px,
-      #F1B0B0 26px
-    ); 
+      to bottom,
+      #FFEDED 0px,
+      #FFEDED 23px,
+      #F1B0B0 23px,
+      #F1B0B0 24px
+    );
     width: 900px;
     height: 500px;
     border-radius: 10px;
@@ -106,10 +106,21 @@ nav button{
     display: block;
     align-self: center;
 
+    padding: 26px 20px 20px 20px;
+    box-sizing: border-box;
+    line-height: 24px;
+    font-size: 16px;
+
     margin-left: 32px;
 
     border: 2px solid #F1B0B0;
 }
+
+.textInput p {
+    margin: 0;
+    line-height: 24px;
+}
+
 
 .editButtons{
     display: flex;
