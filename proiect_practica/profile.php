@@ -31,15 +31,22 @@ require_once 'includes/config_session.inc.php';
         <button id="profile">Profile</button>
     </nav>
     </header>
+    <section class="profileView">
+        <section class="profileContent">
+            <section class="detailsAside">
+                <p id="username"><?php
+                echo $_SESSION["user_name"]
+                ?></p>
+                <button id="editBtn">Edit</button>
+                <button id="logOut">Log out</button>
+            </section>
+        </section>
 
-    <section class="profileContent">
-    <section class="detailsAside">
-        <p id="username"><?php
-        echo $_SESSION["user_name"]
-        ?></p>
-        <button id="editBtn">Edit</button>
-        <button id="logOut">Log out</button>
-    </section>
+        <section class="journalContent">
+            <button id="addPost"><img src="../images/add.png"></button>
+            <div class="containedPosts"></div>
+        </section>
+
     </section>
 
     <script src="../js/navFunctions.js"></script>

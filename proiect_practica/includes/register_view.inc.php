@@ -4,7 +4,8 @@ declare(strict_types=1);
 
 function signup_input(){
     if(isset($_SESSION["signup_data"]["username"]) && !isset($_SESSION["errors_signup"]["username_taken"])){
-        echo '<input type="text" name="username" placeholder="Username" value="'.$_SESSION["signnup_data"]["username"].'">';
+        $usernameValue = htmlspecialchars($_SESSION["signup_data"]["username"]);
+        echo '<input type="text" name="username" placeholder="Username" value="' . $usernameValue . '">';
     }
     else{echo '<input type="text" name="username" placeholder="Username">';}
 
@@ -12,7 +13,7 @@ function signup_input(){
         && !isset($_SESSION["errors_signup"]["invalid_email"])){
         echo '<input type="text" name="email" placeholder="Youremailhere@example.com" value="'.$_SESSION["signup_data"]["email"].'">';
     }
-    else{echo '<input type="text" name="email placeholder="Youremailhere@example.com">';}
+    else{echo '<input type="text" name="email" placeholder="Youremailhere@example.com">';}
 
     echo '<input type="text" name="psw" placeholder="Password"></input>';
 }

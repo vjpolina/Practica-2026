@@ -1,0 +1,121 @@
+* button:hover{
+    cursor: pointer;
+}
+
+*{
+    font-family: monospace;
+}
+
+body {
+    background-color: #FCF8F8;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* top bar css*/
+header {
+
+    background-color: #E9A0A0;
+    color: #FCF8F8;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    top: 0;
+    padding: 0;
+    border: 0;
+    margin: 0;
+
+    height: 60px;
+    width: 100%;
+}
+
+#settings{
+    margin-left:20px;
+    display: flex;
+    flex: 10%;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    
+    font-size: 24px;
+}
+
+#settings button{
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    margin-right: 10px;
+}
+
+#settings button img{
+    width: 46px;
+    height: 46px;
+}
+
+nav{
+    margin-right: 20px;
+}
+
+nav button{
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+
+    font-size: 20px;
+    color: #FCF8F8;
+    margin: 15px;
+}
+
+/*page content css*/
+
+.exploreContent{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-self: center;
+}
+
+#exploreText{
+    font-size: 35px;
+    color: #D05A5A;
+}
+
+.cardDisplay{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-self: center;
+
+    gap: 10px;
+    
+    flex: 1;
+    column-gap: 5px;
+
+    position: absolute;
+    top: 25%;
+}
+
+.card{
+    display: block;
+    background:
+    repeating-linear-gradient(
+      0deg,
+      #FFEDED,
+      #FFEDED 25px,
+      #F1B0B0 1px,
+      #F1B0B0 26px
+    ); 
+    width: 1080px;
+    height: 200px;
+    border-radius: 10px;
+
+    display: block;
+    align-self: center;
+
+    margin: 0;
+
+    border: 2px solid #F1B0B0;
+}

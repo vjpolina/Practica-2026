@@ -21,20 +21,19 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
 
         $result = get_user($pdo, $username);
 
-        if(is_username_wrong($result)){
-            $errors["incorrect_login"]="Incorrect login information!";
+        if ($result === false) {
+            $errors["incorrect_login"] = "Incorrect login information!";
+        } elseif (is_password_wrong($psw, $result["psw"])) {
+            $errors["incorrect_login"] = "Incorrect login information!";
         }
 
-        if(!is_username_wrong($result) && is_password_wrong($psw, $result["psw"])){
-            $errors["incorrect_login"]="Incorrect login information!";
-        }
-
-        if($errors){
+        if ($errors) {
             $_SESSION["errors_login"] = $errors;
             header("Location: ../login.php");
             die();
         }
-    
+
+        assert(is_array($result));
         $_SESSION["user_id"] = $result["id"];
         $_SESSION["user_name"] = htmlspecialchars($result["username"]);
         $_SESSION["last_regeneration"] = time();
