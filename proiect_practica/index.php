@@ -9,7 +9,7 @@ require_once 'includes/config_session.inc.php';
     <meta name="viewport" content="width=device-width">
     <title>JournalMe</title>
     <link rel="stylesheet" href="../css/styleIndex.css">
-    <link rel="stylesheet" href="../css/dayColors.css">
+    <link rel="stylesheet" id="theme_state" href="../css/dayColors.css">
     <link rel="stylesheet" href="../css/header.css">
 </head>
 
@@ -17,7 +17,7 @@ require_once 'includes/config_session.inc.php';
 
 <header>
     <div id=settings>
-        <button><img id="theme" src="\Practica-2026\images\moon.png"></button>
+        <button id="theme_switch"><img id="theme_icon" src="\Practica-2026\images\moon.png"></button>
         <a id="language">ENG</a>
     </div>
 
@@ -62,7 +62,7 @@ require_once 'includes/config_session.inc.php';
 
     <section class="actionButtons">
     <button id="create">Create</button>
-    <form action="includes/logout.inc.php" method="post"> <button id="logOut">Log out</button> </form>
+    <form action="includes/logout.inc.php" method="post" class="logout"> <button id="logOut">Log out</button> </form>
     </section>
 
     <?php
@@ -91,6 +91,7 @@ require_once 'includes/config_session.inc.php';
 </footer>
 
 <script src="../js/navFunctions.js"></script>
+<script src="../js/themeswitch.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,205 @@
+body {
+    background-color: #200C0C;
+    color: #FCF8F8;
+}
+
+/*top bar begin*/
+
+header {
+
+    background-color: #401717;
+    color: #FCF8F8;
+    border-bottom: 3px solid #FCF8F8;
+
+}
+
+
+#settings button{
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+}
+
+nav button{
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    color: #FCF8F8;
+}
+
+/*top bar end*/
+/*create page begin*/
+
+.editButtons button{
+    background-color: #401717;
+    border: 2px solid #994141;
+    color: #FCF8F8;
+
+}
+
+#postBtn{
+    background-color: #994141;
+    color: #FBEFEF;
+}
+
+#encouragementText{
+    background-color: #401717;
+    border: 2px solid #994141;
+    color: #FCF8F8;
+}
+
+.textInput{
+    background:
+    repeating-linear-gradient(
+      to bottom,
+      #401717 0px,
+      #401717 23px,
+      #200c0c80 23px,
+      #200C0C80 24px
+    );
+
+    border: 2px solid #401717;
+
+}
+
+/*create page end*/
+/*explore page begin*/
+
+#exploreText{
+    color: #FCF8F8;
+}
+
+.card{
+    background:
+    repeating-linear-gradient(
+      to bottom,
+      #401717 0px,
+      #401717 23px,
+      #200c0c80 23px,
+      #200C0C80 24px
+    );
+
+    border: 2px solid #401717;
+    color: #FCF8F8;
+}
+
+.cardHeader{
+    color:#FCF8F865;
+}
+
+/*explore page end*/
+/*register begin*/
+
+#actionText{
+    background-color: #401717;
+    border: 2px solid #FCF8F875;
+}
+.formInputs input{
+    background-color: #c4616150;
+    border: 2px solid #FCF8F875;
+    color: #FCF8F8;
+}
+
+.formInputs input:focus{
+    border: 2px solid #D05A5A;
+}
+
+.formInputs input::placeholder{
+    color: #FCF8F875;
+}
+
+.actionButton{
+    background-color: #c4616150;
+    border: 2px solid #FCF8F875;
+    color: #FCF8F8;
+}
+
+.formError{
+    color: #d70000;
+}
+
+.formSuccess{
+    color:#4fd700;
+}
+
+/*register end*/
+/*index begin*/
+
+#logoSection{
+    color: #FCF8F8;
+}
+
+#logoImg{
+    background-color: #401717;
+}
+
+#motto{
+    color: #FCF8F8;
+}
+
+.cardDisplay a{
+    color:#FCF8F8;
+}
+
+.actionButtons button{
+    background-color: #401717;
+    border: none;
+    color: #FCF8F8;
+}
+
+.logout button{
+    background-color: #401717;
+}
+
+footer{
+    background-color: #401717;
+    color: #FCF8F8;
+    border-bottom: 3px solid #FCF8F8;
+}
+
+.contact button{
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+}
+
+#feedbackBtn{
+    background-color: #FCF8F8;
+    color: #401717;
+}
+
+/*index end*/
+/*profile begin*/
+
+.profileContent{
+    background-color: #401717;
+    border-right: 3px solid #FCF8F8;
+}
+
+#username{
+    border: none;
+    color: #200C0C;
+    background-color: #FCF8F8;
+}
+
+#editBtn{
+    background-color: #200C0C;
+    border: none;
+    color: #FCF8F8;
+}
+
+#logOutProf{
+    background-color: #200C0C;
+    border: none;
+    color: #FCF8F8;
+}
+
+#addPost{
+    border: 1px solid #FCF8F8;
+    background-color: #401717;
+}
+
+#introText{
+    color: #FCF8F8;
+}
+
+
+
+/*profile end*/
