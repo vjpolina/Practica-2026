@@ -7,66 +7,10 @@
 }
 
 body {
-    background-color: #FCF8F8;
     margin: 0;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-}
-
-/* top bar css*/
-header {
-
-    background-color: #E9A0A0;
-    color: #FCF8F8;
-
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-
-    top: 0;
-    padding: 0;
-    border: 0;
-    margin: 0;
-
-    height: 60px;
-    width: 100%;
-}
-
-#settings{
-    margin-left:20px;
-    display: flex;
-    flex: 10%;
-    align-items: center;
-    justify-content: flex-start;
-    text-align: center;
-    
-    font-size: 24px;
-}
-
-#settings button{
-    background-color: rgba(255, 255, 255, 0);
-    border: none;
-    margin-right: 10px;
-}
-
-#settings button img{
-    width: 46px;
-    height: 46px;
-}
-
-nav{
-    margin-right: 20px;
-}
-
-nav button{
-    background-color: rgba(255, 255, 255, 0);
-    border: none;
-
-    font-size: 20px;
-    color: #FCF8F8;
-    margin: 15px;
 }
 
 /* page content css */
@@ -99,7 +43,6 @@ main{
     flex: 1;
 
     font-size: 40px;
-    color: #D05A5A;
     font-weight: bold;
     font-style: italic;
 
@@ -111,7 +54,6 @@ main{
     height:80px;
     align-content: center;
     justify-content: center;
-    background-color: #E9A0A0;
     margin-left: 10px;
     border-radius: 10px;
 }
@@ -124,8 +66,6 @@ main{
 #motto{
     font-size: 16px;
     margin-bottom: 35px;
-    color: #D05A5A;
-
 }
 
 
@@ -141,7 +81,6 @@ main{
 }
 
 .cardDisplay a{
-    color:#D05A5A;
     font-size: 40px;
     
     display: flex;
@@ -153,14 +92,6 @@ main{
 
 .card{
     display: block;
-    background:
-    repeating-linear-gradient(
-      0deg,
-      #FFEDED,
-      #FFEDED 25px,
-      #F1B0B0 1px,
-      #F1B0B0 26px
-    ); 
     width: 690px;
     height: 135px;
     border-radius: 10px;
@@ -168,9 +99,18 @@ main{
     display: block;
     align-self: center;
 
-    margin: 0;
+    padding: 26px 20px 20px 20px;
+    box-sizing: border-box;
+    line-height: 24px;
+    font-size: 16px;
 
-    border: 2px solid #F1B0B0;
+    margin-left: 32px;
+}
+
+
+.card p {
+    margin: 0;
+    line-height: 24px;
 }
 
 /* buttons css */
@@ -187,10 +127,6 @@ main{
 }
 
 .actionButtons button{
-    background-color: #FBEFEF;
-    border: 2px solid #E9A0A0;
-    color: #D05A5A;
-
     width:265px;
     height:55px;
     font-size: 24px;
@@ -201,9 +137,6 @@ main{
 /* bottom bar css */
 
 footer{
-    background-color: #E9A0A0;
-    color: #FCF8F8;
-
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -236,14 +169,10 @@ footer a{
 }
 
 .contact button{
-    background-color: rgba(255, 255, 255, 0);
-    border: none;
     margin: 15px;
 }
 
 #feedbackBtn{
-    background-color: #FCF8F8;
-    color: #E9A0A0;
     font-size: 15px;
     width: 210px;
     height: 30px;

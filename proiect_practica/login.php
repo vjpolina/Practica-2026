@@ -11,6 +11,7 @@ require_once 'includes/login_view.inc.php';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JournalMe</title>
     <link rel="stylesheet" href="../css/register.css">
+    <link rel="stylesheet" href="../css/dayColors.css">
 </head>
 <body>
 
