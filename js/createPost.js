@@ -30,6 +30,12 @@ document.addEventListener("DOMContentLoaded", () => {
     if (privacyBtn) {
         const privacyImg = privacyBtn.querySelector('img');
         const getTheme = () => localStorage.getItem('theme') || 'day';
+        const getLanguage = () => localStorage.getItem('language') === 'ro' ? 'ro' : 'en';
+
+        const translation = {
+            en: { private: 'Private post', public: 'Public post' },
+            ro: { private: 'Postare privată', public: 'Postare publică' }
+        };
 
         const updatePrivacyIcon = () => {
             const theme = getTheme();
@@ -39,9 +45,14 @@ document.addEventListener("DOMContentLoaded", () => {
                 : (theme === 'night' ? '../images/unlock-night.png' : '../images/unlock.png');
         };
 
+        const updatePrivacyTitle = () => {
+            const language = getLanguage();
+            privacyBtn.title = isPrivate ? translation[language].private : translation[language].public;
+        };
+
         const initPrivacyIcon = () => {
             updatePrivacyIcon();
-            privacyBtn.title = isPrivate ? 'Private post' : 'Public post';
+            updatePrivacyTitle();
         };
 
         initPrivacyIcon();

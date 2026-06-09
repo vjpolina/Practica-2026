@@ -12,6 +12,17 @@ body {
     padding: 0;
 }
 
+#languageToggle {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: transparent;
+    border: none;
+    color: inherit;
+    font-size: 16px;
+    cursor: pointer;
+}
+
 .registerForm {
     position: absolute;
     top: 50%;
@@ -89,7 +100,7 @@ body {
   20%, 40%, 60%, 80% { transform: translateX(5px); }
 }
 
-/* Tablet (≤768px) */
+/* tablet */
 @media (max-width: 768px) {
     .formInputs input {
         width: min(600px, calc(100vw - 48px));
@@ -100,13 +111,12 @@ body {
     }
 }
 
-/* Phone (≤480px) */
+/* phone */
 @media (max-width: 480px) {
     .registerForm {
         width: 100%;
         padding: 0 16px;
         box-sizing: border-box;
-        /* keep centered via absolute positioning but constrain width */
     }
 
     #actionText {

@@ -25,6 +25,10 @@ nav button{
     color: #FCF8F8;
 }
 
+#languageToggle{
+    color: #FCF8F8;
+}
+
 /*top bar end*/
 /*create page begin*/
 
@@ -91,12 +95,14 @@ nav button{
 #actionText{
     background-color: #401717;
     border: 2px solid #FCF8F875;
+    color: #FCF8F8;
 }
 .formInputs input{
     background-color: #c4616150;
     border: 2px solid #FCF8F875;
     color: #FCF8F8;
 }
+
 
 .formInputs input:focus{
     border: 2px solid #D05A5A;
@@ -152,7 +158,6 @@ nav button{
 footer{
     background-color: #401717;
     color: #FCF8F8;
-    border-bottom: 3px solid #FCF8F8;
 }
 
 .contact button{
@@ -164,6 +169,41 @@ footer{
     background-color: #FCF8F8;
     color: #401717;
 }
+
+
+.feedback-modal-content{
+    color: #FCF8F8;
+    background: #200C0C;
+}
+
+#feedbackPrompt{
+    color: #FCF8F875;
+}
+
+#feedbackEmail::placeholder{
+    color: #994141;
+}
+
+#feedbackText::placeholder{
+    color: #994141;
+}
+
+.feedback-modal-content textarea,
+.feedback-modal-content input {
+    border: 1px solid #FCF8F8;
+}
+
+#feedbackSubmit {
+    background: #401717;
+    color: #FCF8F8;
+    border: 1px solid #FCF8F8;
+}
+
+#feedbackCancel {
+    background: #401717;
+    color: #FCF8F8;
+}
+
 
 /*index end*/
 /*profile begin*/

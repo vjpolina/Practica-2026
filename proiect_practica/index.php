@@ -16,11 +16,10 @@ require_once 'includes/config_session.inc.php';
 <body>
 
 <header>
-    <div id=settings>
+    <div id="settings">
         <button id="theme_switch"><img id="theme_icon" src="\Practica-2026\images\moon.png"></button>
-        <a id="language">ENG</a>
+        <button type="button" id="languageToggle">ENG</button>
     </div>
-
     <nav>
         <?php
     if(!isset($_SESSION["user_id"])){?>
@@ -35,7 +34,6 @@ require_once 'includes/config_session.inc.php';
 
     <?php
     } ?>
-
     </nav>
 </header>
 
@@ -80,7 +78,7 @@ require_once 'includes/config_session.inc.php';
 </section>
 
 <footer>
-    <a>Contact us:</a>
+    <a id="contactTitle">Contact us:</a>
     <div class="contact">
     <button><img id="Instagram" src="\Practica-2026\images\instagram.png"></button>
     <button><img id="Twitter" src="\Practica-2026\images\twitter.png"></button>
@@ -90,7 +88,29 @@ require_once 'includes/config_session.inc.php';
     </div>
 </footer>
 
+<div id="feedbackModal" class="feedback-modal hidden" aria-hidden="true" role="dialog" aria-labelledby="feedbackTitle" aria-describedby="feedbackPrompt">
+    <div id="feedbackBackdrop" class="feedback-backdrop"></div>
+    <div class="feedback-modal-content">
+        <button type="button" id="feedbackClose" class="feedback-close" aria-label="Close feedback form">×</button>
+        <h2 id="feedbackTitle">Submit feedback</h2>
+        <p id="feedbackPrompt">We value your input. Tell us what you think.</p>
+        <form id="feedbackForm">
+            <label for="feedbackText" id="feedbackLabel">Feedback</label>
+            <textarea id="feedbackText" name="feedback" required minlength="10" placeholder="Describe your feedback"></textarea>
+            <label for="feedbackEmail" id="feedbackEmailLabel">Email</label>
+            <input id="feedbackEmail" name="email" type="email" required placeholder="you@example.com">
+            <div class="feedback-actions">
+                <button type="submit" id="feedbackSubmit" data-default="Send">Send</button>
+                <button type="button" id="feedbackCancel">Cancel</button>
+            </div>
+            <p class="feedback-message" aria-live="polite"></p>
+        </form>
+    </div>
+</div>
+
 <script src="../js/navFunctions.js"></script>
+<script src="../js/languageSwitch.js"></script>
+<script src="../js/feedbackPopup.js"></script>
 <script src="../js/themeswitch.js"></script>
 </body>
 

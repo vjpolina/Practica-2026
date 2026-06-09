@@ -15,11 +15,10 @@ require_once 'includes/config_session.inc.php';
 <body>
 
 <header>
-    <div id=settings>
+    <div id="settings">
         <button id="theme_switch"><img id="theme_icon" src="../images/moon.png"></button>
-        <a id="language">ENG</a>
+        <button type="button" id="languageToggle">ENG</button>
     </div>
-
     <nav>
         <?php
     if(!isset($_SESSION["user_id"])){?>
@@ -34,7 +33,6 @@ require_once 'includes/config_session.inc.php';
 
     <?php
     } ?>
-
     </nav>
 </header>
 
@@ -54,6 +52,7 @@ require_once 'includes/config_session.inc.php';
         <button type="button" id="postBtn">Post!</button>
 </section>
 <script src="../js/navFunctions.js"></script>
+<script src="../js/languageSwitch.js"></script>
 <script src="../js/themeswitch.js"></script>
 <script src="../js/createPost.js"></script>
 </body>

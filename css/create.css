@@ -100,7 +100,7 @@ body {
     padding-right: 5px;
 }
 
-/* Tablet (≤1024px) */
+/* tablet */
 @media (max-width: 1024px) {
     .createDisplay {
         position: static;
@@ -138,7 +138,7 @@ body {
     }
 }
 
-/* Phone (≤600px) */
+/* phone */
 @media (max-width: 600px) {
     .createDisplay {
         padding: 12px;

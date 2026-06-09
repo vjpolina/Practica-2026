@@ -15,6 +15,7 @@ require_once 'includes/login_view.inc.php';
 </head>
 <body class="register-page">
 
+<button type="button" id="languageToggle">ENG</button>
 <section class="registerForm">
 <a id="actionText">Login</a>
 <form action="includes/login.inc.php" method="post" class="formInputs" autocomplete="off">
@@ -23,12 +24,13 @@ require_once 'includes/login_view.inc.php';
     <?php
     check_login_errors();
     ?>
-    <button class="actionButton">Log in</button>
+    <button class="actionButton" id="loginSubmit">Log in</button>
 </form>
     <button class="actionButton" id="toRegister">Sign up</button>
 </section>
 
 <script src="../js/navFunctions.js"></script>
+<script src="../js/languageSwitch.js"></script>
 <script src="../js/themeswitch.js"></script>
 
 </body>
