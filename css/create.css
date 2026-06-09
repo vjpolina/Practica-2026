@@ -99,3 +99,73 @@ body {
     justify-content: flex-end;
     padding-right: 5px;
 }
+
+/* Tablet (≤1024px) */
+@media (max-width: 1024px) {
+    .createDisplay {
+        position: static;
+        padding: 20px;
+        align-self: center;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .createContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .textInput {
+        width: min(900px, calc(100vw - 40px));
+        height: 400px;
+        margin-left: 0;
+    }
+
+    .editButtons {
+        flex-direction: row;
+        align-self: center;
+        margin-top: 10px;
+    }
+
+    #postBtn {
+        align-self: center;
+    }
+
+    #encouragementText {
+        align-self: center;
+        justify-content: center;
+        padding-right: 0;
+    }
+}
+
+/* Phone (≤600px) */
+@media (max-width: 600px) {
+    .createDisplay {
+        padding: 12px;
+    }
+
+    .textInput {
+        width: calc(100vw - 24px);
+        height: 320px;
+        margin-left: 0;
+        font-size: 14px;
+        padding: 16px 12px;
+    }
+
+    .editButtons button {
+        height: 48px;
+        width: 48px;
+        font-size: 24px;
+    }
+
+    #postBtn {
+        width: 130px;
+        height: 38px;
+        font-size: 16px;
+    }
+
+    #encouragementText {
+        width: 100%;
+        font-size: 16px;
+    }
+}

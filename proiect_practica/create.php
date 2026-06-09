@@ -42,16 +42,16 @@ require_once 'includes/config_session.inc.php';
     <p id="encouragementText">Share your daily story!</p>
     <section class="createContainer">
         <div class="editButtons">
-            <button id="boldSetting">B</button>
-            <button id="italicSetting">I</button>
-            <button id="underlineSetting">U</button>
-            <button id="privacySetting"><img src="../images/unlock.png"></button>
+            <button type="button" id="boldSetting">B</button>
+            <button type="button" id="italicSetting">I</button>
+            <button type="button" id="underlineSetting">U</button>
+            <button type="button" id="privacySetting"><img src="../images/unlock.png"></button>
         </div>
-        <div class=textInput>
+        <div class="textInput" contenteditable="true" tabindex="0">
             <p></p>
         </div>
             </section>
-        <button id="postBtn">Post!</button>
+        <button type="button" id="postBtn">Post!</button>
 </section>
 <script src="../js/navFunctions.js"></script>
 <script src="../js/themeswitch.js"></script>

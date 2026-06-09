@@ -74,6 +74,43 @@ body {
     text-align: left;
 }
 
-.cardDate{
+/* Tablet (≤1200px) */
+@media (max-width: 1200px) {
+    .cardDisplay {
+        position: static;
+        padding: 20px;
+        width: 100%;
+        box-sizing: border-box;
+        align-self: stretch;
+    }
 
+    .card {
+        width: min(1080px, calc(100vw - 40px));
+        margin-left: 0;
+    }
+}
+
+/* Phone (≤600px) */
+@media (max-width: 600px) {
+    .cardDisplay {
+        padding: 12px;
+        gap: 8px;
+    }
+
+    .card {
+        width: calc(100vw - 24px);
+        min-height: 160px;
+        padding: 16px 12px;
+        font-size: 14px;
+        margin-left: 0;
+        margin-top: 8px;
+    }
+
+    .cardHeader {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+        margin-top: -16px;
+        margin-bottom: 16px;
+    }
 }

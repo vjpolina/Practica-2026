@@ -29,7 +29,6 @@ body {
     align-items: center;
     justify-content: flex-start;
     padding-top: 30px;
-
     width: 250px;
     flex-shrink: 0;
     min-height: 100%;
@@ -55,38 +54,30 @@ body {
 #username{
     border-radius: 10px;
     font-size: 20px;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     width: 200px;
     height: 45px;
-
 }
 
 #editBtn{
     border-radius: 10px;
-
     height: 30px;
     width:140px;
     font-size: 20px;
 }
 
+#logOut,
 #logOutProf{
     border-radius: 10px;
-
     height: 30px;
     width:140px;
     font-size: 20px;
-
     margin:0;
-    position: absolute;
-    bottom:2%;
 }
 
 /*journal content css*/
-
 
 .journalContent{
     display: flex;
@@ -94,7 +85,6 @@ body {
     align-items: stretch;
     justify-content: flex-start;
     padding: 20px;
-
     flex: 1;
 }
 
@@ -103,7 +93,6 @@ body {
     height: 45px;
     border-radius: 6px;
     margin-bottom: 16px;
-
     z-index: 10;
 }
 
@@ -113,7 +102,6 @@ body {
     justify-content: space-between;
     width: 100%;
     gap: 16px;
-
     margin-bottom: 15px;
 }
 
@@ -126,19 +114,16 @@ body {
 
 /*cards/posts style*/
 .card{
-    width: 1080px;
+    width: min(1080px, calc(100vw - 40px));
     min-height: 200px;
     max-height: fit-content;
     border-radius: 10px;
-
     display: block;
     align-self: center;
-
     padding: 26px 20px 20px 26px;
     box-sizing: border-box;
     line-height: 24px;
     font-size: 16px;
-
     margin-left: 32px;
     margin-bottom: 12px;
 }
@@ -154,4 +139,89 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+@media (max-width: 1024px) {
+    .profileView {
+        flex-direction: column;
+    }
+
+    .profileContent {
+        width: 100%;
+        min-width: unset;
+    }
+
+    .detailsAside {
+        justify-content: flex-start;
+        padding-bottom: 15px;
+    }
+
+    .topIntro {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    #username,
+    #editBtn,
+    #logOut,
+    #logOutProf {
+        width: 100%;
+        max-width: 320px;
+    }
+}
+
+@media (max-width: 768px) {
+    .profileContent {
+        padding-top: 20px;
+    }
+
+    .journalContent {
+        padding: 16px;
+    }
+
+    .card {
+        width: calc(100vw - 32px);
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #introText {
+        font-size: 26px;
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        padding: 16px 12px;
+        font-size: 14px;
+        margin-left: 0;
+        margin-right: 0;
+        width: calc(100vw - 24px);
+    }
+
+    .topIntro {
+        gap: 10px;
+    }
+
+    #addPost {
+        width: 40px;
+        height: 40px;
+    }
+
+    #introText {
+        font-size: 22px;
+    }
+
+    .journalContent {
+        padding: 12px;
+    }
+
+    .cardHeader {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+        margin-top: -16px;
+        margin-bottom: 16px;
+    }
 }
