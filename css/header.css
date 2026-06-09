@@ -42,3 +42,50 @@ nav button{
     font-size: 20px;
     margin: 15px;
 }
+
+/* Tablet (≤768px) */
+@media (max-width: 768px) {
+    header {
+        height: auto;
+        min-height: 60px;
+        flex-wrap: wrap;
+        padding: 8px 0;
+    }
+
+    #settings {
+        flex: none;
+        margin-left: 12px;
+    }
+
+    nav button {
+        font-size: 16px;
+        margin: 8px;
+    }
+}
+
+/* Phone (≤480px) */
+@media (max-width: 480px) {
+    header {
+        justify-content: space-between;
+        padding: 6px 8px;
+    }
+
+    #settings {
+        margin-left: 6px;
+        font-size: 18px;
+    }
+
+    #settings button img {
+        width: 24px;
+        height: 24px;
+    }
+
+    nav {
+        margin-right: 6px;
+    }
+
+    nav button {
+        font-size: 14px;
+        margin: 4px 6px;
+    }
+}

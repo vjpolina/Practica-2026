@@ -179,3 +179,93 @@ footer a{
 
     border-radius: 10px;
 }
+
+/* Tablet (≤1024px) */
+@media (max-width: 1024px) {
+    .pageContent {
+        flex-direction: column;
+        align-items: center;
+        padding: 16px;
+    }
+
+    main {
+        flex: none;
+        width: 100%;
+        max-width: 720px;
+    }
+
+    .card {
+        width: min(690px, calc(100vw - 64px));
+    }
+
+    .actionButtons button {
+        width: 220px;
+        height: 50px;
+        font-size: 20px;
+    }
+}
+
+/* Phone (≤600px) */
+@media (max-width: 600px) {
+    .pageContent {
+        padding: 12px;
+        gap: 16px;
+    }
+
+    #logoSection {
+        font-size: 28px;
+    }
+
+    #logoImg img {
+        height: 60px;
+    }
+
+    #motto {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    .card {
+        width: calc(100vw - 32px);
+        height: auto;
+        min-height: 100px;
+        margin-left: 0;
+        font-size: 14px;
+        padding: 16px 12px;
+    }
+
+    .cardDisplay a {
+        font-size: 28px;
+    }
+
+    .actionButtons {
+        gap: 16px;
+    }
+
+    .actionButtons button {
+        width: calc(100vw - 48px);
+        max-width: 265px;
+        height: 48px;
+        font-size: 18px;
+    }
+
+    footer {
+        flex-wrap: wrap;
+        height: auto;
+        padding: 8px 0;
+    }
+
+    footer a {
+        font-size: 18px;
+        margin-left: 16px;
+    }
+
+    .contact button {
+        margin: 8px;
+    }
+
+    #feedbackBtn {
+        width: 170px;
+        font-size: 13px;
+    }
+}
