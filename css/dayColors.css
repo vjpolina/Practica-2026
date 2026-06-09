@@ -74,6 +74,7 @@ nav button{
       #F1B0B0 24px
     );
     border: 2px solid #F1B0B0;
+    color: #d05a5a;
 
 }
 
@@ -84,10 +85,6 @@ nav button{
 /*explore page end*/
 /*register begin*/
 
-body {
-    background-color: #FCF8F8;
-    color:#D05A5A;
-}
 
 #actionText{
     background-color: #fbecec;

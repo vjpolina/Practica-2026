@@ -8,7 +8,7 @@ require_once 'includes/config_session.inc.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/create.css">
-    <link rel="stylesheet" href="../css/dayColors.css">
+    <link rel="stylesheet" id="theme_state" href="../css/dayColors.css">
     <link rel="stylesheet" href="../css/header.css">
     <title>JournalMe</title>
 </head>
@@ -16,7 +16,7 @@ require_once 'includes/config_session.inc.php';
 
 <header>
     <div id=settings>
-        <button><img id="theme" src="\Practica-2026\images\moon.png"></button>
+        <button id="theme_switch"><img id="theme_icon" src="../images/moon.png"></button>
         <a id="language">ENG</a>
     </div>
 
@@ -54,6 +54,7 @@ require_once 'includes/config_session.inc.php';
         <button id="postBtn">Post!</button>
 </section>
 <script src="../js/navFunctions.js"></script>
+<script src="../js/themeswitch.js"></script>
 <script src="../js/createPost.js"></script>
 </body>
 </html>

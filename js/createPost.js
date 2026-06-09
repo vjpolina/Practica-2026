@@ -13,19 +13,37 @@ document.getElementById("underlineSetting").addEventListener("click", () => {
 // privacy
 let isPrivate = false;
 const privacyBtn = document.getElementById("privacySetting");
+if (privacyBtn) {
+    const privacyImg = privacyBtn.querySelector('img');
+    const getTheme = () => localStorage.getItem('theme') || 'day';
 
-privacyBtn.addEventListener("click", () => {
-    isPrivate = !isPrivate;
-    privacyBtn.querySelector("img").src = isPrivate
-        ? "../images/lock.png"
-        : "../images/unlock.png";
-    privacyBtn.title = isPrivate ? "Private post" : "Public post";
-});
+    // initialize icon based on current theme
+    (function initPrivacyIcon() {
+        const theme = getTheme();
+        if (privacyImg) {
+            privacyImg.src = isPrivate
+                ? (theme === 'night' ? '../images/lock-night.png' : '../images/lock.png')
+                : (theme === 'night' ? '../images/unlock-night.png' : '../images/unlock.png');
+        }
+        privacyBtn.title = isPrivate ? 'Private post' : 'Public post';
+    })();
+
+    privacyBtn.addEventListener("click", () => {
+        isPrivate = !isPrivate;
+        const theme = getTheme();
+        if (privacyImg) {
+            privacyImg.src = isPrivate
+                ? (theme === 'night' ? '../images/lock-night.png' : '../images/lock.png')
+                : (theme === 'night' ? '../images/unlock-night.png' : '../images/unlock.png');
+        }
+        privacyBtn.title = isPrivate ? 'Private post' : 'Public post';
+    });
+}
 
 // edit text
 const textInput = document.querySelector(".textInput");
 textInput.setAttribute("contenteditable", "true");
-textInput.querySelector("p").textContent = ""; // clear placeholder
+textInput.querySelector("p").textContent = "";
 
 // post
 document.getElementById("postBtn").addEventListener("click", async () => {
