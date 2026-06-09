@@ -118,7 +118,8 @@ body {
     min-height: 200px;
     max-height: fit-content;
     border-radius: 10px;
-    display: block;
+    display: flex;
+    flex-direction: column;
     align-self: center;
     padding: 26px 20px 20px 26px;
     box-sizing: border-box;
@@ -139,6 +140,37 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 12px;
+}
+
+.cardBody{
+    flex: 1;
+}
+
+.cardFooter{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: auto;
+    padding-top: 12px;
+}
+
+.deleteBtn{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 8px;
+
+    width: fit-content;
+    height: fit-content;
+}
+
+.deleteIcon{
+    width: 15px;
+    height: 15x;
 }
 
 @media (max-width: 1024px) {

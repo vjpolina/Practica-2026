@@ -1,5 +1,44 @@
 document.addEventListener("DOMContentLoaded", async () => {
     const container = document.querySelector(".containedPosts");
+    if (!container) return;
+
+    container.addEventListener("click", async (e) => {
+        const deleteBtn = e.target.closest(".deleteBtn");
+        if (!deleteBtn || deleteBtn.disabled) return;
+
+        const postId = deleteBtn.dataset.postId;
+        if (!postId) return;
+
+        if (!confirm("Delete this post? This cannot be undone.")) return;
+
+        deleteBtn.disabled = true;
+
+        try {
+            const response = await fetch("deletePost.php", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ post_id: postId })
+            });
+
+            const result = await response.json();
+
+            if (result.success) {
+                const card = deleteBtn.closest(".card");
+                card?.remove();
+
+                if (!container.querySelector(".card")) {
+                    container.innerHTML = `<p class="noPosts">You haven't written anything yet. <a href="create.php">Start your journal!</a></p>`;
+                }
+            } else {
+                alert("Error: " + (result.message || "Could not delete the post."));
+                deleteBtn.disabled = false;
+            }
+        } catch (err) {
+            console.error("Delete failed:", err);
+            alert("Network error. Please try again.");
+            deleteBtn.disabled = false;
+        }
+    });
 
     try {
         const response = await fetch("get_posts.php?filter=mine");
@@ -22,6 +61,11 @@ document.addEventListener("DOMContentLoaded", async () => {
                     <span class="cardPrivacy">${post.is_private ? "Private" : "Public"}</span>
                 </div>
                 <div class="cardBody">${post.content}</div>
+                <div class="cardFooter">
+                    <button type="button" class="deleteBtn" data-post-id="${post.id}" title="Delete post">
+                        <img src="../images/trash.png" alt="Delete" class="deleteIcon">
+                    </button>
+                </div>
             `;
             container.appendChild(card);
         });
