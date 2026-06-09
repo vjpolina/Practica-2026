@@ -9,6 +9,8 @@ require_once 'includes/config_session.inc.php';
     <meta name="viewport" content="width=device-width">
     <title>JournalMe</title>
     <link rel="stylesheet" href="../css/styleIndex.css">
+    <link rel="stylesheet" href="../css/dayColors.css">
+    <link rel="stylesheet" href="../css/header.css">
 </head>
 
 <body>

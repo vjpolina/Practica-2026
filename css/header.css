@@ -1,0 +1,44 @@
+header {
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    top: 0;
+    padding: 0;
+    border: 0;
+    margin: 0;
+
+    height: 60px;
+    width: 100%;
+}
+
+#settings{
+    margin-left:20px;
+    display: flex;
+    flex: 10%;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    
+    font-size: 24px;
+}
+
+#settings button{
+    margin-right: 10px;
+}
+
+#settings button img{
+    width: 46px;
+    height: 46px;
+}
+
+nav{
+    margin-right: 20px;
+}
+
+nav button{
+    font-size: 20px;
+    margin: 15px;
+}
