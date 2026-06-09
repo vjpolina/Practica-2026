@@ -16,11 +16,10 @@ require_once 'includes/config_session.inc.php';
     
 
 <header>
-    <div id=settings>
+    <div id="settings">
         <button id="theme_switch"><img id="theme_icon" src="\Practica-2026\images\moon.png"></button>
-        <a id="language">ENG</a>
+        <button type="button" id="languageToggle">ENG</button>
     </div>
-
     <nav>
         <?php
     if(!isset($_SESSION["user_id"])){?>
@@ -35,7 +34,6 @@ require_once 'includes/config_session.inc.php';
 
     <?php
     } ?>
-
     </nav>
 </header>
 
@@ -49,6 +47,7 @@ require_once 'includes/config_session.inc.php';
 
 </section>
 <script src="../js/navFunctions.js"></script>
+<script src="../js/languageSwitch.js"></script>
 <script src="../js/loadExplorePosts.js"></script>
 <script src="../js/themeswitch.js"></script>
 </body>

@@ -23,6 +23,7 @@ body {
     gap: 24px;
     padding: 20px;
     flex: 1;
+    min-height: calc(100vh - 120px);
 }
 
 main{
@@ -78,15 +79,15 @@ main{
     
     flex: 1;
     column-gap: 5px;
+        margin-top: -1%;
 }
 
 .cardDisplay a{
-    font-size: 40px;
+    font-size: 25px;
     
     display: flex;
     flex:1;
     align-self: center;
-
     margin:10px;
 }
 
@@ -142,6 +143,7 @@ footer{
     align-items: center;
     justify-content: center;
 
+    position: absolute;
     bottom: 0;
     padding: 0;
     border: 0;
@@ -180,7 +182,116 @@ footer a{
     border-radius: 10px;
 }
 
-/* Tablet (≤1024px) */
+.feedback-modal {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+}
+
+.feedback-modal.hidden {
+    display: none;
+}
+
+.feedback-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+}
+
+.feedback-modal-content {
+    position: relative;
+    z-index: 1;
+    width: min(520px, calc(100% - 32px));
+    max-height: 90vh;
+    overflow-y: auto;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+    color: inherit;
+}
+
+.feedback-close {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    width: 36px;
+    height: 36px;
+    border: none;
+    background: transparent;
+    color: inherit;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.feedback-modal-content h2 {
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-size: 24px;
+}
+
+.feedback-modal-content p {
+    margin: 0 0 18px;
+}
+
+.feedback-modal-content label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.feedback-modal-content textarea,
+.feedback-modal-content input {
+    width: 100%;
+    border-radius: 10px;
+    padding: 12px;
+    font-family: inherit;
+    font-size: 14px;
+    margin-bottom: 18px;
+    box-sizing: border-box;
+}
+
+.feedback-modal-content textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+.feedback-actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.feedback-actions button {
+    min-width: 100px;
+    border-radius: 10px;
+    padding: 10px 18px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+
+.feedback-message {
+    margin-top: 16px;
+    min-height: 20px;
+    font-size: 14px;
+}
+
+.feedback-message.error {
+    color: #d93025;
+}
+
+.feedback-message.success {
+    color: #188038;
+}
+
+/* tablet */
 @media (max-width: 1024px) {
     .pageContent {
         flex-direction: column;
@@ -205,7 +316,7 @@ footer a{
     }
 }
 
-/* Phone (≤600px) */
+/* phone */
 @media (max-width: 600px) {
     .pageContent {
         padding: 12px;
