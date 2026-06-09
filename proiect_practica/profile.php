@@ -39,7 +39,6 @@ require_once 'includes/config_session.inc.php';
                 <p id="username"><?php
                 echo $_SESSION["user_name"]
                 ?></p>
-                <button id="editBtn">Edit</button>
                 <form action="includes/logout.inc.php" method="post" class="logout"> <button id="logOutProf">Log out</button> </form>
             </section>
         </section>
@@ -51,9 +50,7 @@ require_once 'includes/config_session.inc.php';
                 <img src="../images/add.png" alt="Add post">
             </button>
             </div>
-            <div class="containedPosts">
-                <p class="card"></p>
-            </div>
+            <div class="containedPosts"></div>
         </section>
 
     </section>

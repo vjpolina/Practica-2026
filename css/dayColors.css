@@ -223,6 +223,10 @@ footer{
     color: #FCF8F8;
 }
 
+.deleteBtn{
+    background-color: #d05a5a;
+}
+
 #addPost{
     border: none;
     background-color: #D05A5A;
