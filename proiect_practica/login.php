@@ -20,7 +20,7 @@ require_once 'includes/login_view.inc.php';
 <a id="actionText">Login</a>
 <form action="includes/login.inc.php" method="post" class="formInputs" autocomplete="off">
     <input type="text" name="username" placeholder="Username"></input>
-    <input type="text" name="psw" placeholder="Password"></input>
+    <input type="password" name="psw" placeholder="Password"></input>
     <?php
     check_login_errors();
     ?>

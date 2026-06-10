@@ -32,11 +32,12 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
         require_once 'config_session.inc.php';
 
         if($errors){
+            require_once 'config_session.inc.php';
             $_SESSION["errors_signup"] = $errors;
 
-            $signupData= [
-                "username"=>$username,
-                "email"=>$email
+            $signupData = [
+                "username" => $username,
+                "email" => $email
             ];
 
             $_SESSION["signup_data"] = $signupData;
@@ -45,13 +46,17 @@ if($_SERVER["REQUEST_METHOD"] === "POST"){
             die();
         }
 
-        register_user( $pdo, $username, $psw, $email);
+        require_once 'config_session.inc.php';
+        register_user($pdo, $username, $psw, $email);
+
+        $_SESSION["user_id"] = (int)$pdo->lastInsertId();
+        $_SESSION["user_name"] = htmlspecialchars($username, ENT_QUOTES, 'UTF-8');
+        $_SESSION["last_regeneration"] = time();
+        session_regenerate_id(true);
+
         header("Location: ../profile.php");
 
-        $pdo=null;
-        $stmt=null;
-        session_reset();
-
+        $pdo = null;
         die();
 
     } catch (PDOException $e) {

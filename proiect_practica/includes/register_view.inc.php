@@ -15,7 +15,7 @@ function signup_input(){
     }
     else{echo '<input type="text" name="email" placeholder="Youremailhere@example.com">';}
 
-    echo '<input type="text" name="psw" placeholder="Password"></input>';
+    echo '<input type="password" name="psw" placeholder="Password">';
 }
 
 function check_errors(){

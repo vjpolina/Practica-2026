@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         container.innerHTML = "";
 
         if (posts.length === 0) {
-            container.innerHTML = `<p class="noPosts">You haven't written anything yet. <a href="create.php">Start your journal!</a></p>`;
+            container.innerHTML = `<p class="noPosts">You haven't written anything yet.</p>`;
             return;
         }
 

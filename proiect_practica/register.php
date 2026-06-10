@@ -18,7 +18,6 @@ require_once 'includes/register_view.inc.php';
 <section class="registerForm">
 <a id="actionText">Sign Up</a>
 <form action="includes/register.inc.php" method="post" class="formInputs" autocomplete="off">
-
     <?php
     signup_input();
     check_errors();?>
